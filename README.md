@@ -16,14 +16,13 @@ This tool patches the SDK package to include additional functionality.
 Usage: apply_patch.py [options]
 
 Options:
-  -h, --help            show this help message and exit
-  -q, --quiet           print only warnings and errors
-  -v, --verbose         be verbose
-  --debug               debug mode
-  --diffstat            print diffstat and exit
-  -d DIR, --directory=DIR
-                        specify root directory for applying patch
-  --revert              apply patch in reverse order (unpatch)
+  -h, --help                show this help message and exit
+  -q, --quiet               print only warnings and errors
+  -v, --verbose             be verbose
+  --debug                   debug mode
+  --diffstat                print diffstat and exit
+  -d DIR, --directory=DIR   specify root directory for applying patch
+  --revert                  apply patch in reverse order (unpatch)
 ```
 
 Run the tool with Python to automatically find the location of the Python module and patch it:
@@ -80,3 +79,10 @@ Vector will start doing his workout when he sees his cube.  Grab the cube, tell 
 
 #### events.py
 Prints all the details of all the events that Vector generates.  Useful for learning.
+
+### Notes
+
+* Some operations on Vector, like saying text, does not require you to take control.  
+* If you have not taken control and try an issue a movement command, your script will stop working.
+
+
