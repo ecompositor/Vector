@@ -75,10 +75,15 @@ Patch examples are stored in the `examples` folder:
 Watch Vector through the viewer as he does his normal stuff.
 
 #### workout.py
-Vector will start doing his workout when he sees his cube.  Grab the cube, tell Vector to "Go exploring" and then place the cube in front of him for the best effect.
+Vector will start doing his workout when he sees his cube.  Grab the cube, tell Vector to "Go exploring" and then place the cube in front of him for the best effect.  Vector will only do the workout once per script execution.
+
+[Video](https://www.youtube.com/watch?v=GCCpfzEIx44)
 
 #### events.py
 Prints all the details of all the events that Vector generates.  Useful for learning.
+
+#### anim_list.py
+Saves all of Vector's animations to anim.txt
 
 ### Notes
 

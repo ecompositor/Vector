@@ -15,7 +15,7 @@ class VectorState(object):
 # Global state for Vector
 vector_state = VectorState()
 # Should vector start his workout?
-vector_state.start_workout = True
+vector_state.start_workout = False
 # Did vector finish his workout?
 vector_state.workout_done = False
 
@@ -62,6 +62,9 @@ def do_workout(robot):
             robot.say_text("Five")
             robot.behavior.set_lift_height(0.0, duration=0.5)       
 
+            robot.behavior.drive_straight(distance_mm(-25), speed_mmps(50))
+            robot.anim.play_animation("anim_fistbump_success_01")
+
             # Vector completed his workout
             vector_state.workout_done = True
 
@@ -93,6 +96,7 @@ def main():
                 time.sleep(1)
                 # Check if vector should start workout 
                 if (vector_state.start_workout and not vector_state.workout_done):
+                    vector_state.start_workout = False
                     do_workout(robot)
         except KeyboardInterrupt:
             pass
